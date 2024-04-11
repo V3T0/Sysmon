@@ -1,0 +1,8 @@
+<Sysmon schemaversion="4.90">
+  <HashAlgorithms>*</HashAlgorithms>
+  <EventFiltering>
+    <CreateRemoteThread onmatch="include">
+			<SourceImage condition="begin with">C:\Users\</SourceImage>
+	  </CreateRemoteThread>
+  </EventFiltering>
+</Sysmon>

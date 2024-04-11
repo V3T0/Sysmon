@@ -1,0 +1,8 @@
+<Sysmon schemaversion="4.90">
+  <HashAlgorithms>*</HashAlgorithms>
+  <EventFiltering>
+    <PipeEvent onmatch="include">
+		<Image condition="begin with">C:\Users\</Image>
+	</PipeEvent>
+  </EventFiltering>
+</Sysmon>
