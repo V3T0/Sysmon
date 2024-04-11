@@ -1,0 +1,7 @@
+<Sysmon schemaversion="4.90">
+  <HashAlgorithms>*</HashAlgorithms>
+  <EventFiltering>
+    <WmiEvent onmatch="exclude">
+	</WmiEvent>
+  </EventFiltering>
+</Sysmon>

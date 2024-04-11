@@ -1,0 +1,14 @@
+<Sysmon schemaversion="4.90">
+  <HashAlgorithms>*</HashAlgorithms>
+  <EventFiltering>
+    <RuleGroup name="windows native binaries location anomaly" groupRelation="or">
+        <ImageLoad onmatch="include">
+            <Rule name="image loaded from users dir" groupRelation="and">
+				<Image condition="begin with">C:\Users\</Image>
+				<ImageLoaded condition="begin with">C:\Users\</ImageLoaded>
+			</Rule>
+        </ImageLoad>
+    </RuleGroup>
+    <ProcessTerminate onmatch="include"></ProcessTerminate>
+  </EventFiltering>
+</Sysmon>
